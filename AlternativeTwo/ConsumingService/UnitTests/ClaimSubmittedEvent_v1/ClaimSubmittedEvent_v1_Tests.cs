@@ -11,7 +11,6 @@ namespace ConsumingService.UnitTests.ClaimSubmittedEvent_v1
         private static readonly string SUBMISSION_DATE = "2020-01-01T01:00:00Z";
         private static readonly string EVENT_TYPE = "ClaimSubmittedEvent";
 
-
         [TestMethod]
         public void CANREAD_V1_EVENT()
         {

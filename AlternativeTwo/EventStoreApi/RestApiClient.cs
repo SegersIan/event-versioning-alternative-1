@@ -19,7 +19,7 @@ namespace EventStoreRestApi
         public HttpResponse GetEvent(HttpRequest httpRequest)
         {
             var eventId = ExtractEventId(httpRequest.URI);
-            var eventObject = EventRepository.GetEvent(eventId);
+            var eventObject = EventStore.GetEvent(eventId);
 
             if(eventObject == null) throw new Exception("Event Not Found");
 
