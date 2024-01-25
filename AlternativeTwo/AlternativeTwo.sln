@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDataContracts", "EventDataContracts\EventDataContracts.csproj", "{49FA14BF-6022-4BE8-BA91-A67BCBFC9447}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStoreRestApi", "EventStoreApi\EventStoreRestApi.csproj", "{FD8C89F3-F448-45E5-BBC6-CCD79E7ECE57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumingService", "ConsumingService\ConsumingService.csproj", "{337FC855-8D0B-4112-8116-9BE4ECEF7C30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{49FA14BF-6022-4BE8-BA91-A67BCBFC9447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49FA14BF-6022-4BE8-BA91-A67BCBFC9447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49FA14BF-6022-4BE8-BA91-A67BCBFC9447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8C89F3-F448-45E5-BBC6-CCD79E7ECE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8C89F3-F448-45E5-BBC6-CCD79E7ECE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8C89F3-F448-45E5-BBC6-CCD79E7ECE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8C89F3-F448-45E5-BBC6-CCD79E7ECE57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337FC855-8D0B-4112-8116-9BE4ECEF7C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337FC855-8D0B-4112-8116-9BE4ECEF7C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337FC855-8D0B-4112-8116-9BE4ECEF7C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337FC855-8D0B-4112-8116-9BE4ECEF7C30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
