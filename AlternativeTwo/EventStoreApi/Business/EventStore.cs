@@ -1,6 +1,6 @@
 ﻿namespace EventStoreRestApi.Logic
 {
-    internal static class EventRepository
+    internal static class EventStore
     {
         public static Model.BaseEvent? GetEvent(Guid id)
         {

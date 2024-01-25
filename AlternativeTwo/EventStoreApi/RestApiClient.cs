@@ -24,18 +24,15 @@ namespace EventStoreRestApi
             if(eventObject == null) throw new Exception("Event Not Found");
 
             var targetVersionEventObject = EventTransformer.TransformToTargetVersion(eventObject, httpRequest.HeaderAccept);
-            var jsonConvertSettings = new JsonSerializerSettings
-            {
-                Converters = new List<JsonConverter> { new StringEnumConverter() }
-            };
+            var jsonBody = Serialize(targetVersionEventObject);
 
             var httpResponse = new HttpResponse() {
-                JsonBody = JsonConvert.SerializeObject(targetVersionEventObject, jsonConvertSettings),
+                JsonBody = jsonBody,
                 HeaderContentType = httpRequest.HeaderAccept
             };
 
             return httpResponse;
-    }
+        }
 
         /// <summary>
         /// URI format: "/events/<guid>"
@@ -44,9 +41,24 @@ namespace EventStoreRestApi
         /// </summary>
         /// <param name="uri"></param>
         /// <returns></returns>
-        public Guid ExtractEventId(string uri)
+        private Guid ExtractEventId(string uri)
         {
             return Guid.Parse(uri.Split("/")[2]);
         }
+
+        /// <summary>
+        /// Simple wrapper method for serializing objects
+        /// </summary>
+        /// <param name="targetObject"></param>
+        /// <returns></returns>
+        private string Serialize(object targetObject)
+        {
+            var jsonConvertSettings = new JsonSerializerSettings
+            {
+                Converters = new List<JsonConverter> { new StringEnumConverter() }
+            };
+            return JsonConvert.SerializeObject(targetObject, jsonConvertSettings);
+        }
+
     }
 }
