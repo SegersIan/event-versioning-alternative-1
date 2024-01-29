@@ -1,5 +1,5 @@
 ﻿using ConsumingService.Business;
-using EventDataContracts.Model;
+using ConsumingService.Model;
 using Newtonsoft.Json;
 
 namespace ConsumingService.UnitTests.ClaimSubmittedEvent_v2

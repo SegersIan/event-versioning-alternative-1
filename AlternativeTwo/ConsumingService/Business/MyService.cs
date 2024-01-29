@@ -1,4 +1,4 @@
-﻿using EventDataContracts.Model;
+﻿using ConsumingService.Model;
 
 namespace ConsumingService.Business
 {
